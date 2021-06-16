@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Products from './pages/Products';
 import Login from './pages/Login';
 
 import ProtectedRoute from './components/ProtectedRoute';
@@ -11,6 +12,9 @@ export default function Routes() {
     <Router>
       <Switch>
         <Route exact path="/">
+          <Products />
+        </Route>
+        <Route exact path="/login-admin">
           <Login />
         </Route>
         <ProtectedRoute path="/dashboard" component={Dashboard} />
