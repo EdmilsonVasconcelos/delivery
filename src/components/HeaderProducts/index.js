@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -28,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
   link: {
     margin: theme.spacing(1, 1.5),
   },
+  toolbarLink: {
+    textDecoration: 'none',
+    color: 'rgba(0, 0, 0, 0.87)',
+  },
 }));
 
 export default function HeaderProducts() {
@@ -49,10 +54,14 @@ export default function HeaderProducts() {
             noWrap
             className={classes.toolbarTitle}
           >
-            VSC Delivery
+            <Link className={classes.toolbarLink} to="/">
+              VSC Delivery
+            </Link>
           </Typography>
           <Badge badgeContent={1} color="secondary">
-            <AddShoppingCartIcon />
+            <Link className={classes.toolbarLink} to="/cart">
+              <AddShoppingCartIcon />
+            </Link>
           </Badge>
         </Toolbar>
       </AppBar>

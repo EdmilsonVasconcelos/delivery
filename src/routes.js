@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import ProtectedRoute from './components/ProtectedRoute';
 import Dashboard from './pages/Dashboard';
 import Purchases from './pages/Purchases';
+import AddToCart from './pages/AddToCart';
 
 export default function Routes() {
   return (
@@ -13,6 +14,9 @@ export default function Routes() {
       <Switch>
         <Route exact path="/">
           <Products />
+        </Route>
+        <Route exact path="/add-to-cart/:idProduct">
+          <AddToCart />
         </Route>
         <Route exact path="/login-admin">
           <Login />

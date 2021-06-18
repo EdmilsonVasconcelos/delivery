@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header() {
+export default function HeaderDashboard() {
   const classes = useStyles();
 
   const [open, setOpen] = useState(true);
